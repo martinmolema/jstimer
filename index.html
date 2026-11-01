@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Timer</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js" type="module"></script>
+</head>
+<body>
+<main>
+    <article>
+        <section>
+            <fieldset>
+                <legend>Settings</legend>
+                <div>
+                <p>
+                    <label for="txt_hours">Hours</label>
+                    <input name="hours" id="txt_hours" type="number" min="0" max="23" value="0">
+                </p>
+                <p>
+                    <label for="txt_minutes">Minutes</label>
+                    <input name="minutes" id="txt_minutes" type="number" min="0" max="59" value="1">
+                </p>
+                <p>
+                    <label for="txt_seconds">Seconds</label>
+                    <input name="minutes" id="txt_seconds" type="number" min="0" max="59" value="0">
+                </p>
+                </div>
+                <div>
+                <button id="start">Start</button>
+                <button id="pause">Pause</button>
+                <button id="reset">Reset</button>
+                <button id="stop">Stop</button>
+                </div>
+            </fieldset>
+        </section>
+        <section id="timer" class="timer">
+            <p id="timestring" class="timestring">
+            </p>
+        </section>
+    </article>
+</main>
+</body>
+</html>

@@ -1,0 +1,107 @@
+
+@font-face {
+    font-family: digital7;
+    src: url('../fonts/digital-7.ttf') format('truetype');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+main {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    padding:2rem;
+
+    article {
+        height: 100%;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 300px auto;
+        grid-gap: 1rem;
+
+        padding: 2rem;
+
+        section {
+            margin: 0;
+        }
+    }
+
+    fieldset {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 10px;
+
+        input, label, button, legend {
+            font-size:2rem;
+        }
+        input {
+            text-align: right;
+        }
+
+        label {
+            display: inline-block;
+            width: 10rem;
+        }
+
+        div:has(button) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap:1rem;
+
+            button {
+                width: 10rem;
+            }
+        }
+    }
+
+    .timer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        padding: 2rem;
+        margin:1rem;
+
+        & .timestring {
+            margin:0;
+            font-size: 20cqw;
+            text-fit: grow 300%;
+            font-family: digital7, monospace;
+
+            &.paused {
+                color: red;
+            }
+
+            &.timeFinished {
+                animation: timerFinished 1s linear infinite;
+            }
+        }
+
+
+    }
+}
+
+@keyframes timerFinished {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
